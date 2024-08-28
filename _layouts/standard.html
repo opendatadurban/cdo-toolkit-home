@@ -1,0 +1,48 @@
+---
+layout: base
+---
+<div class="city-width-container">
+    <div class="city-grid-row">
+      <div class="city-grid-column-two-thirds">
+        <div class="app-page-header city-!-margin-top-3 city-!-margin-bottom-3">
+          <div class="gem-c-title city-!-margin-top-8 city-!-margin-bottom-8">
+            <span class="city-caption-xl">
+              {{site.city_short_name}}
+            </span>
+            <h1 class="gem-c-title__text city-heading-xl">
+              {{page.title}}
+            </h1>
+          </div>
+          <p class="city-body-l city-!-margin-bottom-7 app-page-header__summary">
+            {{page.description}}
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Points -->
+    <div class="city-grid-row">
+      <div class="city-grid-column-two-thirds">
+        <ol class="city-list">
+            {% for item in page.first_list_items %}
+              <li class="app-standard-point" id="criterion-1">
+                <h2 class="city-heading-m city-!-margin-bottom-3 app-standard-point__title">
+                  <span class="app-standard-point__number"> {{ forloop.index }}.</span>
+                  {{item.text}}
+                </h2>
+                <div class="app-standard-point__details">
+                  <p class="city-body app-standard-point__link"><a class="city-link" href="{{item.url}}">{{page.read_more_text}} {{forloop.index}}</a></p>
+                </div>
+              </li>
+            {% endfor %}
+        </ol>
+      </div>
+  
+      <div class="city-grid-column-one-third">
+        <aside class="related city-!-padding-top-4">
+          <div class="related-item city-!-padding-top-4">
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>

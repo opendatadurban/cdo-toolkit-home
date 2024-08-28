@@ -1,0 +1,47 @@
+<footer class="city-footer">
+  <div class="city-width-container">
+    <div class="city-footer__meta">
+      <div class="city-footer__meta-item city-footer__meta-item--grow">
+        <h2 class="city-visually-hidden">Items</h2>
+        <ul class="city-footer__inline-list">
+          {%- for path in page_paths -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+            {%- if my_page.title -%}
+              <li class="city-footer__inline-list-item">
+                <a class="city-footer__link" href="{{ my_page.url | relative_url }}">
+                  {{ my_page.title | escape }}
+                </a>
+              </li>
+            {%- endif -%}
+          {%- endfor -%}  
+        </ul>
+        
+        <div class="city-footer__meta-custom">
+          {{site.footer_text}}
+        </div>
+        <span class="city-footer__licence-description">
+          All content is available under the
+          <a
+            class="city-footer__link"
+            href="https://creativecommons.org/licenses/by/4.0/deed.en"
+            rel="license"
+          >Creative Commons Attribution License 4.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="city-footer__meta-item">
+        {% if site.copyright_text %}
+          {% if site.copyright_text %}
+            <a
+              class="city-footer__link city-footer__copyright-logo"
+              href="{{site.copyright_url}}"
+            >
+              © {{site.copyright_text}}
+            </a>
+          {% else %}
+            © {{site.copyright_text}}
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</footer>

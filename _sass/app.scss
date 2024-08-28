@@ -1,0 +1,97 @@
+$city-brand-colour: #ffd78c;
+$city-assets-path: "/assets/city-frontend/" !default;
+@import "../node_modules/city-frontend/dist/city/all.scss";
+
+.city-header {
+  background-color: #e17056;
+  .city-header__container {
+    border-bottom: none;
+    padding-bottom: city-spacing(1);
+    margin-bottom:0;
+  }
+  .city-header__logo {
+    width:50%
+  }
+  .city-header__content {
+    width:50%
+  }
+  margin-bottom: 0;
+  border-bottom:none;
+}
+
+// standard points
+.app-service-standard-point {
+  border-top: 1px solid $city-border-colour;
+  margin-top: city-spacing(5);
+  padding-top: city-spacing(5);
+
+  &:first-child {
+    margin-top: city-spacing(0);
+  }
+
+  &__title {
+    margin-left: city-spacing(6);
+
+    @include city-media-query($from: tablet) {
+      margin-left: city-spacing(8);
+    }
+  }
+
+  &__number {
+    float: left;
+    margin-left: -(city-spacing(6));
+
+    @include city-media-query($from: tablet) {
+      margin-left: -(city-spacing(8));
+    }
+  }
+
+  &__details {
+    margin-bottom: city-spacing(2);
+    margin-left: city-spacing(6);
+
+    @include city-media-query($from: tablet) {
+      margin-left: city-spacing(8);
+    }
+  }
+
+  &__link {
+    margin-top: city-spacing(2);
+  }
+}
+
+// masthead
+.app-masthead {
+  @include city-responsive-padding(6, "top");
+  @include city-responsive-padding(6, "bottom");
+  border-bottom: 1px solid city-colour("blue");
+  color: city-colour("white");
+  background-color: city-colour("blue");
+}
+
+.app-masthead__title {
+  color: city-colour("white");
+  @include city-responsive-margin(6, "bottom");
+}
+
+.app-masthead__description {
+  @include city-font(24);
+  margin-bottom: 0;
+}
+
+.app-masthead__image {
+  display: none;
+  @include city-media-query($from: desktop) {
+    display: block;
+    width: 100%;
+    margin-top: city-spacing(3);
+  }
+}
+
+// Add styling for 'what's new' banner
+.city-phase-banner {
+  .city-tag {
+    margin-right:city-spacing(2);
+  }
+}
+

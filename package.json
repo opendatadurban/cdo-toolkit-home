@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "babel": "^6.23.0",
+    "city-frontend": "^0.0.3"
+  },
+  "scripts": {
+    "build:css": "sass _sass/app.scss assets/css/app.css"
+  }
+}

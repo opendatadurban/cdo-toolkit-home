@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body class="city-template__body city-frontend-supported">
+
+    {%- include header.html -%}
+    <div class="city-width-container">
+      <div class="city-phase-banner">
+        <p class="city-phase-banner__content">
+          <strong class="city-tag govuk-phase-banner__content__tag">
+            Alpha
+          </strong>
+          <span class="city-phase-banner__text">
+            This is new. Help us improve it and <a class="city-link" href="mailto:{{site.team_email}}">give your feedback by email</a>.
+          </span>
+        </p>
+      </div>
+    </div> 
+    
+    {{ content | replace: '<p>', '<p class="city-body">' | replace '<h1>', '<h1 class="govuk-heading-l">' }}
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>

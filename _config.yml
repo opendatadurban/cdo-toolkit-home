@@ -1,0 +1,31 @@
+title: City data toolkit
+description: Tools and guidance for data teams and chief data officers
+footer_text: Created by Open Cities Lab (OCL) as part of UK Foreign Commission Development Office (FCDO) funding.
+copyright_text: 
+copyright_url: 
+team_email: example@example.com
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  syntax_highlighter: rouge
+plugins_dir: _plugins
+plugins:
+  - jekyll-feed
+  - jekyll-toc
+
+header_pages:
+  - _standard/index.md
+
+include:
+  - _pages
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+assets:
+  sources:
+    - _sass
+    - assets/css
